@@ -7,8 +7,10 @@ RUN apt-get install -y \
     python3-numpy python3-scipy python3-matplotlib \
     ipython ipython-notebook python3-pandas python3-nose
 
-RUN pip3 install --upgrade pip virtualenv beautifulsoup4 html5lib bs4 lxml
+RUN pip3 install --upgrade pip virtualenv
 RUN pip3 install --upgrade tensorflow ipython jupyter
+RUN pip3 install --upgrade pip virtualenv
+RUN pip3 install --upgrade beautifulsoup4 html5lib bs4 lxml
 
 RUN virtualenv --system-site-packages -p python3 ~/tensorflow
 
