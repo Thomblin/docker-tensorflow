@@ -19,6 +19,8 @@ RUN virtualenv --system-site-packages -p python3 ~/tensorflow
 # https://github.com/tornadoweb/tornado/issues/2015
 RUN pip3 install --ignore-installed tornado==4.4.3
 
+RUN /bin/bash -c "source /root/tensorflow/bin/activate"
+
 WORKDIR /notebooks
 
 ENV PYTHONIOENCODING=UTF-8
